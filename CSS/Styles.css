@@ -237,3 +237,117 @@ header{
 .category p{
   font-size: 0.85rem;
 }
+
+@media screen and (max-width: 1024px){
+  .container {
+    width: var(--container-width-md);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2{
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  nav button#close_menu-btn {
+    display: none;
+  }
+
+  .nav_menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav_menu li {
+    width: 100%;
+    height: 5.8rem;
+    animation: animateNavItems 400ms linear forwards;
+    transform-origin: top right;
+    opacity: 0;
+  }
+  
+  
+  .nav_menu li:nth-child(2){
+    animation-delay: 50ms;
+  }
+
+  .nav_menu li:nth-child(3){
+    animation-delay: 100ms;
+  }
+
+  .nav_menu li:nth-child(4){
+    animation-delay: 150ms;
+  }
+
+  @keyframes animateNavItems {
+    0%{
+      
+    }
+
+    100% {
+      
+      opacity: 1;
+    }
+  }
+
+  .nav_menu li a {
+    background: var(--color-primar);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .nav_menu li a:hover {
+    background: var(--color-bg2);
+    color: var(--color-white);
+  }
+
+  header {
+    height: 72vh;
+    margin-bottom: rem;
+  }
+
+  .header_container {
+    gap: 0;
+    padding-bottom: 3rem;
+  }
+
+  .categories {
+    height: auto;
+  }
+
+  .categories_container{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .categories_left {
+    margin-right: 0;
+  }
+}
