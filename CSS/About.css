@@ -125,8 +125,8 @@
         gap: 4rem;
     }
 
-    .about_achievements-left {
-        width: 80%;
+    .about_achievments-right {
+        width: 100%;
     }
 
     .loc_container {
@@ -140,13 +140,22 @@
 }
 
 @media screen and (max-width: 600px) {
-    .achievment__card {
+    .achievments__cards {
         grid-template-columns: 1fr 1fr;
         gap: 0.7rem;
     }
 
+    .about_achievments-right {
+        width: 100%;
+    }
+
     .loc__address {
         padding: 0;
+    }
+
+    .loc_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .loc__address p {
